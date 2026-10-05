@@ -1,0 +1,271 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #213547;
+    background-color: #f4f7f6;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.app-container>header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 1rem;
+}
+
+.app-container>header h1 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.app-container>header p {
+    color: #7f8c8d;
+    margin: 0.5rem 0 0 0;
+}
+
+.app-container main>section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.app-container main>section:empty {
+    display: none;
+}
+
+h2 {
+    margin-top: 0;
+    color: #34495e;
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: #34495e;
+}
+
+/* Error banner */
+.error-banner {
+    background: #fdecea;
+    border: 1px solid #f5c2c0;
+    border-left: 5px solid #c0392b;
+    color: #922b21;
+    padding: 0.9rem 1.2rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Upload */
+.upload-form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.upload-form h2 {
+    flex-basis: 100%;
+    margin-bottom: 0;
+}
+
+input[type="file"] {
+    flex: 1;
+}
+
+input[type="file"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Console */
+.console-body {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1rem;
+    border-radius: 4px;
+    height: 220px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.log-info {
+    color: #4ec9b0;
+    margin-bottom: 0.3rem;
+}
+
+.log-error {
+    color: #f48771;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.running-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: 1rem;
+    font-size: 0.85rem;
+    color: #2980b9;
+    font-weight: 600;
+}
+
+.spinner {
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid #bdd7ee;
+    border-top-color: #2980b9;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Report */
+.report-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 0;
+}
+
+.report-content {
+    line-height: 1.6;
+}
+
+.report-content h1,
+.report-content h2,
+.report-content h3 {
+    color: #2c3e50;
+}
+
+.warning-box {
+    background: #fff8e1;
+    border-left: 5px solid #f39c12;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.conflicts {
+    background: #fdf2f8;
+    border-left: 5px solid #8e44ad;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.violations-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.88rem;
+}
+
+.violations-table th,
+.violations-table td {
+    border: 1px solid #ddd;
+    padding: 0.6rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.violations-table th {
+    background-color: #f8f9fa;
+    white-space: nowrap;
+}
+
+.sort-btn {
+    background: none;
+    color: #2c3e50;
+    padding: 0;
+    font-weight: 700;
+    font-size: inherit;
+}
+
+.sort-btn:hover {
+    text-decoration: underline;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: white;
+}
+
+.badge-high {
+    background: #c0392b;
+}
+
+.badge-medium {
+    background: #e67e22;
+}
+
+.badge-low {
+    background: #27ae60;
+}
+
+.proof {
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #566573;
+}
+
+.proof summary {
+    cursor: pointer;
+}
+
+.proof ul {
+    margin: 0.3rem 0 0 1rem;
+    padding: 0;
+}
+
+.citations {
+    font-size: 0.8rem;
+    color: #566573;
+    min-width: 220px;
+}
+
+.citations div {
+    margin-bottom: 0.4rem;
+}
