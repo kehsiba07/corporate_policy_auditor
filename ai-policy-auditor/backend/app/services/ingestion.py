@@ -1,8 +1,11 @@
 import logging
 import re
 
+# pyrefly: ignore [missing-import]
 import pdfplumber
+# pyrefly: ignore [missing-import]
 import pytesseract
+# pyrefly: ignore [missing-import]
 from pdf2image import convert_from_path
 
 from app.services import PipelineError
