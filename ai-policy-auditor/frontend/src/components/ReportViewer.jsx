@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const SEVERITY_ORDER = { High: 3, Medium: 2, Low: 1 }
 
@@ -59,7 +60,7 @@ export default function ReportViewer({ report }) {
       </p>
 
       <div className="report-content">
-        <ReactMarkdown>{report.report_markdown}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{report.report_markdown}</ReactMarkdown>
       </div>
 
       {report.warnings?.length > 0 && (
